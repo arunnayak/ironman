@@ -10,12 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><input type="checkbox" />&nbsp;</td>
-        <td>APP_01</td>
-        <td>Car</td>
+      <tr *ngFor="let app of apps">
+        <td><input type="checkbox" id="{{app.id}}" />&nbsp;</td>
+        <td>{{app.name}}</td>
+        <td>{{app.description}}</td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td><input type="checkbox" />&nbsp;</td>
         <td>APP_02</td>
         <td>Bike</td>
@@ -24,7 +24,7 @@
         <td><input type="checkbox" />&nbsp;</td>
         <td>APP_03</td>
         <td>AutoPart</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
   <button><a routerLink="/contact-us">Details</a></button>
